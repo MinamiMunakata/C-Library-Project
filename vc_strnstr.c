@@ -1,6 +1,6 @@
 /* ************************************ */
 /*                                      */
-/* vc_strstr.c                          */
+/* vc_strnstr.c                          */
 /*                                      */
 /* By: Minami                           */
 /*                                      */
@@ -29,7 +29,7 @@ static int check_if_same(char *start_of_str, char *to_find) {
     return 1;
 }
 
-char *vc_strstr(char *str, char *to_find) {
+char *vc_strnstr(char *str, char *to_find, unsigned int num) {
     int size_str;
     int size_find;
     int i;
@@ -37,7 +37,7 @@ char *vc_strstr(char *str, char *to_find) {
     size_find = vc_strlen(to_find);
     i = 0;
     if (size_find < 1) return str;
-    while (*(str + i) != '\0')
+    while (*(str + i) != '\0' && i < num)
     {
         if (*to_find == *(str + i) && size_str - i >= size_find)
         {

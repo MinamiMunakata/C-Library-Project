@@ -1,18 +1,15 @@
 /* ************************************ */
 /*                                      */
-/* isdigit.c                            */
+/* vc_isascii.c                         */
 /*                                      */
 /* By: Minami                           */
 /*                                      */
 /* ************************************ */
+
 #include <stdio.h>
 
-int vc_isdigit(int ch) {
-    int num;
-    int non_num;
-    num = 1;
-    non_num = 0;
-    if (ch >= 48 && ch <= 57) return num;
-    return non_num;
+int vc_isascii(unsigned int ch)
+{
+    if (ch >= 0 && ch <= 127) return 1;
+    return 0;
 }
-
