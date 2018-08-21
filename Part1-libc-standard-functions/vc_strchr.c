@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 
-char *strchr(char *str, int c)
+char *vc_strchr(char *str, int c)
 {
     int i;
     i = 0;
@@ -19,3 +19,4 @@ char *strchr(char *str, int c)
     }
     return NULL;
 }
+
