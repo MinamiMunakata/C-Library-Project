@@ -1,6 +1,6 @@
 /* ************************************ */
 /*                                      */
-/* vc_toupper.c                         */
+/* vc_striter.c                         */
 /*                                      */
 /* By: Minami                           */
 /*                                      */
@@ -8,15 +8,14 @@
 
 #include <stdio.h>
 
-char *vc_toupper(char *str) {
+void vc_striter(char *s, void (*f)(char *))
+{
     int i;
-    int num;
-    for (i = 0; *(str + i) != '\0'; i++)
+    i = 0;
+    while(*(s + i))
     {
-        if (*(str + i) >= 97 && *(str + i) <= 122)
-        {
-            *(str + i) -= 32; 
-        }
+        f(s + i);
+        i++;
     }
-    return str;
 }
+

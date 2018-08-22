@@ -1,22 +1,20 @@
 /* ************************************ */
 /*                                      */
-/* vc_toupper.c                         */
+/* vc_strdel.c                          */
 /*                                      */
 /* By: Minami                           */
 /*                                      */
 /* ************************************ */
 
 #include <stdio.h>
+#include <stdlib.h>
 
-char *vc_toupper(char *str) {
-    int i;
-    int num;
-    for (i = 0; *(str + i) != '\0'; i++)
+void vc_strdel(char **as)
+{
+    if (*as != NULL)
     {
-        if (*(str + i) >= 97 && *(str + i) <= 122)
-        {
-            *(str + i) -= 32; 
-        }
+        free(*as);
+        *as = NULL;
     }
-    return str;
 }
+

@@ -1,6 +1,6 @@
 /* ************************************ */
 /*                                      */
-/* vc_toupper.c                         */
+/* vc_strlen.c                          */
 /*                                      */
 /* By: Minami                           */
 /*                                      */
@@ -8,15 +8,11 @@
 
 #include <stdio.h>
 
-char *vc_toupper(char *str) {
-    int i;
-    int num;
-    for (i = 0; *(str + i) != '\0'; i++)
+int vc_strlen(char *str) {
+    int i = 0;
+    while(*(str + i) != '\0')
     {
-        if (*(str + i) >= 97 && *(str + i) <= 122)
-        {
-            *(str + i) -= 32; 
-        }
+        i++;
     }
-    return str;
+    return i;
 }

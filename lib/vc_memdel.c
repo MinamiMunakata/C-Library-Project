@@ -1,22 +1,21 @@
 /* ************************************ */
 /*                                      */
-/* vc_toupper.c                         */
+/* vc_memdel.c                          */
 /*                                      */
 /* By: Minami                           */
 /*                                      */
 /* ************************************ */
 
+#include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-char *vc_toupper(char *str) {
-    int i;
-    int num;
-    for (i = 0; *(str + i) != '\0'; i++)
+void vc_memdel(void **ap)
+{
+    if (*ap != NULL)
     {
-        if (*(str + i) >= 97 && *(str + i) <= 122)
-        {
-            *(str + i) -= 32; 
-        }
+        free(*ap);
+        *ap = NULL;
     }
-    return str;
 }
+

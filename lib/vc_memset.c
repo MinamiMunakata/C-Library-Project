@@ -1,6 +1,6 @@
 /* ************************************ */
 /*                                      */
-/* vc_toupper.c                         */
+/* vc_memset.c                          */
 /*                                      */
 /* By: Minami                           */
 /*                                      */
@@ -8,15 +8,13 @@
 
 #include <stdio.h>
 
-char *vc_toupper(char *str) {
+void *vc_memset(void *s, int c, size_t n)
+{
     int i;
-    int num;
-    for (i = 0; *(str + i) != '\0'; i++)
+    i = 0;
+    while (*((char *)s + i) && i < n)
     {
-        if (*(str + i) >= 97 && *(str + i) <= 122)
-        {
-            *(str + i) -= 32; 
-        }
+        ((char *)s)[i] = c;
+        i++;
     }
-    return str;
 }

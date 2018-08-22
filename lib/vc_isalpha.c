@@ -1,6 +1,6 @@
 /* ************************************ */
 /*                                      */
-/* vc_toupper.c                         */
+/* vc_isalpha.c                         */
 /*                                      */
 /* By: Minami                           */
 /*                                      */
@@ -8,15 +8,14 @@
 
 #include <stdio.h>
 
-char *vc_toupper(char *str) {
-    int i;
-    int num;
-    for (i = 0; *(str + i) != '\0'; i++)
-    {
-        if (*(str + i) >= 97 && *(str + i) <= 122)
-        {
-            *(str + i) -= 32; 
-        }
-    }
-    return str;
+int vc_isalpha(int ch) {
+    int alpha;
+    int non_alpha;
+    alpha = 1;
+    non_alpha = 0;
+    if ((ch >= 65 && ch <= 90) || (ch >= 97 && ch <= 122)) return alpha;
+    return non_alpha;
 }
+
+
+

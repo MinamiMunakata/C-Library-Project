@@ -1,6 +1,6 @@
 /* ************************************ */
 /*                                      */
-/* vc_toupper.c                         */
+/* vc_strrchr.c                         */
 /*                                      */
 /* By: Minami                           */
 /*                                      */
@@ -8,15 +8,16 @@
 
 #include <stdio.h>
 
-char *vc_toupper(char *str) {
+char *vc_strrchr(char *str, int c)
+{
     int i;
-    int num;
-    for (i = 0; *(str + i) != '\0'; i++)
+    i = 0;
+    char *ptr;
+    ptr = NULL;
+    while (*(str + i))
     {
-        if (*(str + i) >= 97 && *(str + i) <= 122)
-        {
-            *(str + i) -= 32; 
-        }
+        if(*(str + i) == c) ptr = (str + i);       
+        i++;
     }
-    return str;
+    return ptr;
 }

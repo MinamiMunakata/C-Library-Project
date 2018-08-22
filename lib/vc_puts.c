@@ -1,6 +1,6 @@
 /* ************************************ */
 /*                                      */
-/* vc_toupper.c                         */
+/* vc_puts.c                            */
 /*                                      */
 /* By: Minami                           */
 /*                                      */
@@ -8,15 +8,11 @@
 
 #include <stdio.h>
 
-char *vc_toupper(char *str) {
-    int i;
-    int num;
-    for (i = 0; *(str + i) != '\0'; i++)
+void vc_puts(char *str) {
+    int i = 0;
+    while(*(str + i))
     {
-        if (*(str + i) >= 97 && *(str + i) <= 122)
-        {
-            *(str + i) -= 32; 
-        }
+        putchar(*(str + i));
+        i++;
     }
-    return str;
 }

@@ -1,6 +1,6 @@
 /* ************************************ */
 /*                                      */
-/* vc_toupper.c                         */
+/* vc_memcpy.c                          */
 /*                                      */
 /* By: Minami                           */
 /*                                      */
@@ -8,15 +8,16 @@
 
 #include <stdio.h>
 
-char *vc_toupper(char *str) {
+void * vc_memcpy(void * destination, void * source, size_t num)
+{
     int i;
-    int num;
-    for (i = 0; *(str + i) != '\0'; i++)
+    i = 0;
+    char *dest = (char *)destination;
+    char *src = (char *)source;
+    while (i < num)
     {
-        if (*(str + i) >= 97 && *(str + i) <= 122)
-        {
-            *(str + i) -= 32; 
-        }
+        *(dest + i) = *(src + i);
+        i++;
     }
-    return str;
+    *(dest + num) = '\0';
 }

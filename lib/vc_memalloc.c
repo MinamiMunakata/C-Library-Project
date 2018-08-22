@@ -1,22 +1,25 @@
 /* ************************************ */
 /*                                      */
-/* vc_toupper.c                         */
+/* vc_memalloc.c                        */
 /*                                      */
 /* By: Minami                           */
 /*                                      */
 /* ************************************ */
 
+#include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-char *vc_toupper(char *str) {
+void * vc_memalloc(size_t size)
+{
+    void *area = malloc(size);
+    if (area == NULL) return NULL;
     int i;
-    int num;
-    for (i = 0; *(str + i) != '\0'; i++)
+    i = 0;
+    while (i < size)
     {
-        if (*(str + i) >= 97 && *(str + i) <= 122)
-        {
-            *(str + i) -= 32; 
-        }
-    }
-    return str;
+        ((char *)area)[i] = 0;
+        i++;
+    }    
+    return area;
 }

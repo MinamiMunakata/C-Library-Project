@@ -1,6 +1,6 @@
 /* ************************************ */
 /*                                      */
-/* vc_toupper.c                         */
+/* vc_memchr.c                          */
 /*                                      */
 /* By: Minami                           */
 /*                                      */
@@ -8,15 +8,18 @@
 
 #include <stdio.h>
 
-char *vc_toupper(char *str) {
+void *vc_memchr(void *str, int c, size_t n)
+{
+    char *test = (char *)str;
     int i;
-    int num;
-    for (i = 0; *(str + i) != '\0'; i++)
+    i = 0;
+    while (*((char *)str + i) && i < n)
     {
-        if (*(str + i) >= 97 && *(str + i) <= 122)
+        if(*((char *)str + i) == c)
         {
-            *(str + i) -= 32; 
+            return ((char *)str + i);
         }
+        i++;
     }
-    return str;
+    return NULL;
 }

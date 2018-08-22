@@ -1,22 +1,21 @@
 /* ************************************ */
 /*                                      */
-/* vc_toupper.c                         */
+/* vc_strnew.c                          */
 /*                                      */
 /* By: Minami                           */
 /*                                      */
 /* ************************************ */
 
 #include <stdio.h>
+#include <stdlib.h>
 
-char *vc_toupper(char *str) {
-    int i;
-    int num;
-    for (i = 0; *(str + i) != '\0'; i++)
+char *vc_strnew(size_t size)
+{
+    char *new = (char *)malloc(sizeof(char) * size);
+    for (int i = 0; i < size; i++)
     {
-        if (*(str + i) >= 97 && *(str + i) <= 122)
-        {
-            *(str + i) -= 32; 
-        }
+        new[i] = '\0';
     }
-    return str;
+    return new;
 }
+

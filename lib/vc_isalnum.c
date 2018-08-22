@@ -1,6 +1,6 @@
 /* ************************************ */
 /*                                      */
-/* vc_toupper.c                         */
+/* vc_isalnum.c                         */
 /*                                      */
 /* By: Minami                           */
 /*                                      */
@@ -8,15 +8,13 @@
 
 #include <stdio.h>
 
-char *vc_toupper(char *str) {
-    int i;
-    int num;
-    for (i = 0; *(str + i) != '\0'; i++)
-    {
-        if (*(str + i) >= 97 && *(str + i) <= 122)
-        {
-            *(str + i) -= 32; 
-        }
-    }
-    return str;
+int vc_isalnum(int ch) {
+    int alnum;
+    int non_alnum;
+    alnum = 1;
+    non_alnum = 0;
+    if ((ch >= 65 && ch <= 90) || (ch >= 97 && ch <= 122)) return alnum;
+    if (ch >= 48 && ch <= 57) return alnum;
+    return non_alnum;
 }
+
