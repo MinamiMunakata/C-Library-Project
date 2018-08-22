@@ -7,7 +7,6 @@
 /* ************************************ */
 
 #include <stdio.h>
-#include <stdlib.h>
 
 void vc_strclr(char *s)
 {

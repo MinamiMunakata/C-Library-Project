@@ -1,16 +1,20 @@
 /* ************************************ */
 /*                                      */
-/* vc_putchar.c                         */
+/* vc_strdel.c                          */
 /*                                      */
 /* By: Minami                           */
 /*                                      */
 /* ************************************ */
 
-#include <unistd.h>
-#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-void vc_putchar(char c)
+void vc_strdel(char **as)
 {
-    void *myC = &c;
-    write(1, myC, sizeof(char));
+    if (*as != NULL)
+    {
+        free(*as);
+        *as = NULL;
+    }
 }
+
