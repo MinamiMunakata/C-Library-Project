@@ -24,6 +24,7 @@ char *vc_strjoin(char const *s1, char const *s2)
     char *src2 = (char *)s2;
     int size = vc_strlen(src1) + vc_strlen(src2) + 1;
     char *new = (char *)malloc(sizeof(char) * size);
+    if (new == NULL) return NULL;
     int i = 0;
     while (i < size)
     {
