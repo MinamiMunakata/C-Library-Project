@@ -7,7 +7,7 @@
 /* ************************************ */
 #include <stdio.h>
 
-int isprint(char *str) {
+int vc_isprint(char *str) {
     int printable;
     int non_printable;
     int i;
