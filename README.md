@@ -2,6 +2,8 @@
 
 ### _Re-implementation of C statndard library_
 
+1. Part1
+---------------
 * vc_atoi.c
 * vc_bzero.c
 * vc_isalnum.c
@@ -31,3 +33,21 @@
 * vc_strstr.c
 * vc_tolower.c
 * vc_toupper.c
+
+2. Part2
+---------------
+* vc_itoa.c
+* vc_memalloc.c
+* vc_memdel.c
+* vc_putchar.c
+* vc_putendl.c
+* vc_putnbr.c
+* vc_strclr.c
+* vc_strdel.c
+* vc_striter.c
+* vc_strjoin.c
+* vc_strmap.c
+* vc_strnew.c
+* vc_strsplit.c
+* vc_strsub.c
+* vc_strtrim.c
