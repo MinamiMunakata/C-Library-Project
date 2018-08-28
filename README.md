@@ -49,3 +49,8 @@
 * vc_strsplit.c
 * vc_strsub.c
 * vc_strtrim.c
+---------------
+
+## How to Use
+### *To use this library in your C project*
+`$ git clone https://github.com/Minamiciccc/C-Library-Project`
