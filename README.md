@@ -1,7 +1,6 @@
 # C-Library-Project
 
-### _Re-implementation of C statndard library_
-[All functions] (#### 1.part1)
+### _Re-implementation of C statndard library_[(#### 1.part1)]
 
 #### 1. Part1
 * vc_atoi.c
