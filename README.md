@@ -1,6 +1,6 @@
 # C-Library-Project
 
-[See All Functions You Can Use](#Re-implementation-of-C-statndard-library)
+[See All Functions You Can Use](#re-implementation-of-c-statndard-library)
 
 ## How to Use
 ### To use this library in your C project
