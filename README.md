@@ -54,10 +54,16 @@
 ## How to Use
 ### To use this library in your C project
 1. clone the repository
+
 `$ git clone https://github.com/Minamiciccc/C-Library-Project`
 2. Run `make` to build the library
+
 `$ make`
 3. include header file in your source file `libvc.h`
+
 `#include "libvc.h"`
 
+
+
+---------------
 
