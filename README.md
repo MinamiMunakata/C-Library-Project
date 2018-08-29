@@ -1,8 +1,24 @@
 # C-Library-Project
 
-### _Re-implementation of C statndard library_
-[Function list](#1-part1)
+[See All Functions You Can Use](#Re-implementation-of-C-statndard-library)
 
+## How to Use
+### To use this library in your C project
+1. clone the repository
+
+`$ git clone https://github.com/Minamiciccc/C-Library-Project`
+
+2. Run `make` to build the library
+
+`$ make`
+
+3. include header file in your source file `libvc.h`
+
+`#include "libvc.h"`
+
+
+---------------
+### _Re-implementation of C statndard library_
 #### 1. Part1
 * vc_atoi.c
 * vc_bzero.c
@@ -50,23 +66,5 @@
 * vc_strsplit.c
 * vc_strsub.c
 * vc_strtrim.c
----------------
-
-## How to Use
-### To use this library in your C project
-1. clone the repository
-
-`$ git clone https://github.com/Minamiciccc/C-Library-Project`
-
-2. Run `make` to build the library
-
-`$ make`
-
-3. include header file in your source file `libvc.h`
-
-`#include "libvc.h"`
-
-
-
 ---------------
 
